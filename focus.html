@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SóUma - Matos Tecnologias</title>
+    <link rel="stylesheet" href="focus.css">
+</head>
+<body>
+
+    <main class="container-app">
+        <section id="setup">
+            <h1>O que você vai fazer agora?</h1>
+            <input type="text" id="taskInput" placeholder="Ex: Escrever relatório..." maxlength="40">
+            <br>
+            <button class="btn-main" onclick="startFocus()">Iniciar Foco</button>
+        </section>
+
+        <section id="focus" class="hidden">
+            <p class="label">TRABALHANDO EM:</p>
+            <h2 id="displayTask" class="task-title"></h2>
+            <div id="timer" class="timer-display">00:00</div>
+            
+            <div class="btn-group">
+                <button id="pauseBtn" class="btn-sec" onclick="togglePause()">Pausar</button>
+                <button class="btn-main btn-success" onclick="showReport()">Concluído</button>
+            </div>
+        </section>
+
+        <section id="report" class="hidden">
+            <h1>🎉 Mandou bem!</h1>
+            <div class="card-report">
+                <p><strong>Tarefa:</strong> <span id="repTask"></span></p>
+                <p><strong>Tempo Total:</strong> <span id="repTime"></span></p>
+                <p><strong>Finalizado às:</strong> <span id="repEnd"></span></p>
+            </div>
+            <br>
+            <button class="btn-main" onclick="resetApp()">Novo Foco</button>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-m">M</span>
+                <p>Matos Tecnologias</p>
+            </div>
+            <p class="copyright">© 2025 Todos os direitos reservados.</p>
+            <nav class="footer-nav">
+                <a href="../pdf/index.html">FotoPDF</a> | 
+                <a href="../contas/index.html">DivideAí</a> | 
+                <a href="../comida/index.html">OqueEuComo?</a> | 
+                <a href="../cozinha/index.html">QuantoDá</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="focus.js"></script>
+</body>
+</html>
